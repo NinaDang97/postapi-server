@@ -67,7 +67,6 @@ app.put('/posts/:id', (req, res) => {
         }
     })
 })
-
 app.listen(8080, () => {
     console.log('SERVER STARTED');
 });
