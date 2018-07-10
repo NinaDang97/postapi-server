@@ -22,6 +22,7 @@ app.get('/', function(req, res){
 //ROUTE '/posts' - METHOD: POST, POST NEW POST TO POST LIST
 app.post('/posts', function(req, res){
     const newPost = req.body;
+    console.log(newPost);
     Post.create(newPost, err => {
         if(err){
             res.send(err);

@@ -13,7 +13,7 @@ const postSchema = new mongoose.Schema({
     },
     content: {
         type: String,
-        minlength: 100
+        minlength: 50
     },
     create_date: {
         type: Date,
