@@ -27,9 +27,9 @@ function seedDB() {
     })
     //add data to db
     data.forEach((post) => {
-        Post.create(post, (err, post) => {
+        Post.create(post, (err) => {
             if(err){
-                console.log(err);
+                res.send(err);
             } else {
                 post.save();
             }
