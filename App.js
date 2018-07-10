@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 // seedDB();
 
 //ROUTE '/' - METHOD: GET, GET ALL POSTS
-app.get('/', function(req, res){
+app.get('/posts', function(req, res){
     Post.find({}, (err, allPosts) => {
         if(err){
             res.send(err);
