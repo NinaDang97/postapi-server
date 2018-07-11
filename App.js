@@ -1,11 +1,12 @@
 const express = require('express'),
+    cors= require('cors');
     app = express(),
     Post = require('./models'),
     // seedDB = require('./seeds');
     bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({extended: true}));
-
+app.use(cors());
 // seedDB();
 
 //ROUTE '/' - METHOD: GET, GET ALL POSTS
@@ -68,6 +69,6 @@ app.put('/posts/:id', (req, res) => {
         }
     })
 })
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 8080, () => {
     console.log('SERVER STARTED');
 });
