@@ -1,13 +1,13 @@
 const express = require('express'),
-    cors= require('cors');
+    cors = require('cors');
     app = express(),
     Post = require('./models'),
     // seedDB = require('./seeds');
     bodyParser = require('body-parser');
 
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(cors());
-// seedDB();
 
 //ROUTE '/' - METHOD: GET, GET ALL POSTS
 app.get('/posts', function(req, res){
