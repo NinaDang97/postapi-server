@@ -48,11 +48,11 @@ app.get('/posts/:id', (req, res) => {
 //ROUTE  'posts/:id' - METHOD: DELETE, DELETE SELECTED POST BY ID
 app.delete('/posts/:id', (req, res) => {
     const id = req.params.id;
-    Post.findByIdAndRemove(id, (err) => {
+    Post.findByIdAndRemove(id, (err, posts) => {
         if(err){
             res.send(err);
         } else {
-            res.redirect('/posts');
+            res.json(posts);
         }
     })
 })
@@ -61,11 +61,11 @@ app.delete('/posts/:id', (req, res) => {
 app.put('/posts/:id', (req, res) => {
     const id = req.params.id;
     const selectedPost = req.body;
-    Post.findByIdAndUpdate(id, selectedPost, {new: true}, (err) => {
+    Post.findByIdAndUpdate(id, selectedPost, {new: true}, (err, posts) => {
         if(err){
             err.send(err);
         } else {
-            res.redirect('/posts/' + id);
+            res.json(posts);
         }
     })
 })
