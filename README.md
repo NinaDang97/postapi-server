@@ -7,3 +7,7 @@ Live version: https://mypostapi.herokuapp.com/
 * `'/api/posts/:id - GET` - Get selected post with given _id
 * `'/api/posts/:id' - PUT` - Update selected post with given _id
 * `'/api/posts/:id' - DELETE` - Delete selected post with given _id
+
+### Install and Run package:
+* `npm install`
+* `npm start` OR `npm run server`
