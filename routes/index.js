@@ -16,12 +16,11 @@ router.get("/", function(req, res) {
 //ROUTE '/posts' - METHOD: POST, POST NEW POST TO POST LIST
 router.post("/", function(req, res) {
   const newPost = req.body;
-  console.log(newPost);
   Post.create(newPost, err => {
     if (err) {
       res.send(err);
     } else {
-      res.redirect("/posts");
+      res.json(newPost);
     }
   });
 });
