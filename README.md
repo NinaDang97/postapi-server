@@ -1,5 +1,4 @@
 # postapi-server
-Live version: https://mypostapi.herokuapp.com/
 
 ### Endpoint - Method - Description
 * `'/api/posts' - GET` - Fetch all current posts
